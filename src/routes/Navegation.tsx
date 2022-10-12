@@ -1,8 +1,7 @@
 import { BrowserRouter , Route, Routes, NavLink, Navigate} from 'react-router-dom'
-import { Suspense } from 'react';
 import { routes } from './routes';
 import logo from '../logo.svg';
-
+import { Suspense } from 'react';
 
 export const Navegation = () => {
   return (
@@ -38,10 +37,10 @@ export const Navegation = () => {
             ))
           }
           {/* replace para que no se echa para atras*/}
-          <Route path="/*" element={<Navigate to='/lazy1' replace/>}/>
+          <Route path="/*" element={<Navigate to={routes[0].to} replace/>}/>
         </Routes>
       </div>
     </BrowserRouter>
     </Suspense>
-  )
+  );
 }
